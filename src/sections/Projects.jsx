@@ -43,6 +43,33 @@ const projects = [
 export const Projects = () => {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary/20 blur-3xl animate-glow-drift opacity-70" />
+  <div className="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-highlight/15 blur-3xl animate-glow-drift animation-delay-300 opacity-60" />
+  <div className="absolute bottom-0 left-1/3 w-[30rem] h-[30rem] rounded-full bg-secondary/20 blur-3xl animate-glow-drift animation-delay-600 opacity-50" />
+
+  <div
+    className="absolute inset-0 opacity-[0.08]"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(232,60,145,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(232,60,145,0.35) 1px, transparent 1px)",
+      backgroundSize: "80px 80px",
+    }}
+  />
+
+  {[...Array(18)].map((_, i) => (
+    <div
+      key={i}
+      className="absolute w-1.5 h-1.5 rounded-full bg-primary/70 animate-float"
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 4}s`,
+        animationDuration: `${10 + Math.random() * 10}s`,
+      }}
+    />
+  ))}
+</div>
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
