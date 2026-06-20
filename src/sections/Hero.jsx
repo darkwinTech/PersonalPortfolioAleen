@@ -1,8 +1,11 @@
 import { Button } from "@/components/Button";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons";
+import { GitHubIcon, LinkedInIcon } from "@/components/SocialIcons";
+import { scrollToContact } from "@/utils/navigation";
 import profileImage from "@/assets/AleenPic.png";
+
+const CV_PATH = "/Aleen-AlQarni-CV.pdf";
 
 const skills = [
   "Java",
@@ -93,10 +96,13 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <Button size="lg" onClick={scrollToContact}>
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                href={CV_PATH}
+                download="Aleen-AlQarni-CV.pdf"
+              >
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
@@ -106,13 +112,13 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me:</span>
               {[
-                { icon: GitHubIcon, href: "#", label: "GitHub" },
-                { icon: LinkedInIcon, href: "#", label: "LinkedIn" },
-                { icon: XIcon, href: "#", label: "X" },
-              ].map((social, idx) => (
+                { icon: GitHubIcon, href: "https://github.com/darkwinTech", label: "GitHub" },
+                { icon: LinkedInIcon, href: "https://www.linkedin.com/in/aleen-alqarni-b92bb7319", label: "LinkedIn" }]
+                .map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
                   aria-label={social.label}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
