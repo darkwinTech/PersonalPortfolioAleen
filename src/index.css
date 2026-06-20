@@ -185,3 +185,18 @@
   }
   
 }
+.nav-pill {
+  transition: all 0.3s ease;
+}
+
+.nav-pill:hover {
+  color: white;
+  background-color: rgba(232, 60, 145, 0.15);
+  border: 1px solid rgba(232, 60, 145, 0.4);
+
+  box-shadow:
+    0 0 10px rgba(232, 60, 145, 0.3),
+    0 0 25px rgba(232, 60, 145, 0.2);
+
+  backdrop-filter: blur(12px);
+}

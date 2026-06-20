@@ -7,7 +7,6 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
 ];
 
 export const Navbar = () => {
@@ -31,12 +30,9 @@ export const Navbar = () => {
       }  z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
-        >
-          PM<span className="text-primary">.</span>
-        </a>
+<a href="#" className="flex items-baseline gap-1">
+  <span className="font-serif italic text-primary">Aleen AlQarni</span>
+</a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">

@@ -1,10 +1,9 @@
 import { Heart } from "lucide-react";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/SocialIcons";
+import { GitHubIcon, LinkedInIcon } from "@/components/SocialIcons";
 
 const socialLinks = [
-  { icon: GitHubIcon, href: "#", label: "GitHub" },
-  { icon: LinkedInIcon, href: "#", label: "LinkedIn" },
-  { icon: XIcon, href: "#", label: "X" },
+  { icon: GitHubIcon, href: "https://github.com/darkwinTech", label: "GitHub" },
+  { icon: LinkedInIcon, href: "https://www.linkedin.com/in/aleen-alqarni-b92bb7319", label: "LinkedIn" }
 ];
 
 const footerLinks = [
@@ -23,11 +22,11 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#" className="text-xl font-bold tracking-tight">
-              PM<span className="text-primary">.</span>
-            </a>
+            <a href="#" className="flex items-baseline gap-1">
+  <span className="font-serif italic text-primary">Aleen AlQarni</span>
+</a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Pedro Machado. All rights reserved.
+              © {currentYear} Aleen AlQarni. 
             </p>
           </div>
 
@@ -48,11 +47,13 @@ export const Footer = () => {
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
-              >
+  key={social.label}
+  href={social.href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={social.label}
+  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+>
                 <social.icon className="w-5 h-5" />
               </a>
             ))}

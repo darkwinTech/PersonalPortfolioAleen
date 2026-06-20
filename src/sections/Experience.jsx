@@ -1,38 +1,56 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "05/2026",
+    role: "Software Testing Engineer",
+    company: "Fuzzing Project",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Conducted automated software testing using AFL++ and AddressSanitizer to identify crashes and security vulnerabilities in bzip2. Performed coverage-guided fuzzing, analyzed software behavior, and documented findings to improve software reliability and robustness.",
+    technologies: ["AFL++", "AddressSanitizer", "Software Testing", "Linux"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "01/2025",
+    role: "Database Developer",
+    company: "Horse Management System",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
+      "Designed and implemented a relational database system to manage horse information, training records, and operational data. Developed SQL queries and applied database design principles to ensure scalability and data integrity.",
+    technologies: ["SQL", "MySQL", "Database Design"],
     current: false,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    period: "11/2024",
+    role: "Frontend Developer",
+    company: "Personal Portfolio Website",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
+      "Developed and deployed a responsive personal portfolio website to showcase technical projects and skills. Implemented modern web development practices and maintained content using frontend technologies.",
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
     current: false,
   },
   {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
+    period: "07/2024",
+    role: "Full-Stack Developer",
+    company: "Learn Hub",
     description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Designed and developed a full-stack educational platform to support student engagement and educational services. Created UI/UX designs using Figma and integrated frontend components with backend services and databases.",
+    technologies: ["React", "JavaScript", "Figma", "MySQL"],
+    current: false,
+  },
+  {
+    period: "06/2023",
+    role: "Software Engineering Team Member",
+    company: "KFUPM Student Impact Hub",
+    description:
+      "Collaborated within a multidisciplinary team to develop a community service platform connecting students and organizations. Contributed to requirements gathering, system analysis, UI design, and software development activities.",
+    technologies: ["Requirements Engineering", "UI Design", "Teamwork"],
+    current: false,
+  },
+  {
+    period: "08/2022",
+    role: "Machine Learning Developer",
+    company: "Car Classification System",
+    description:
+      "Developed a machine learning model to classify used vehicles in Saudi Arabia. Performed data preprocessing, feature engineering, model training, and evaluation to improve prediction accuracy.",
+    technologies: ["Python", "Machine Learning", "Data Analysis"],
     current: false,
   },
 ];
@@ -70,8 +88,8 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            Projects I worked on during my academic journey, showcasing my skills and passion for software development and engineering. 
+            Each experience reflects my commitment to learning and growth in the field.
           </p>
         </div>
 
@@ -98,7 +116,7 @@ export const Experience = () => {
                 <div
                   className={`pl-8 md:pl-0 ${
                     idx % 2 === 0
-                      ? "md:pr-16 md:text-right"
+                      ? "md:pr-16"
                       : "md:col-start-2 md:pl-16"
                   }`}
                 >
